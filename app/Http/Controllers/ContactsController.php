@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\Contact;
+use App\Http\Requests\StoreContact;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -40,6 +41,26 @@ class ContactsController extends Controller
         $contact->city = 'Cebu';
         $contact->state = 'n/a';
         $contact->zip = '6000';
+        $contact->save();
+
+        return response($contact->jsonSerialize(), Response::HTTP_CREATED);
+    }
+
+    /**
+     * Store the data for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function store(StoreContact $request)
+    {
+        $contact = new Contact();
+        $contact->name = $request->input('name');
+        $contact->email = $request->input('email');
+        $contact->phone = $request->input('phone');
+        $contact->country = $request->input('country');
+        $contact->city = $request->input('city');
+        $contact->state = $request->input('state');
+        $contact->zip = $request->input('zip');
         $contact->save();
 
         return response($contact->jsonSerialize(), Response::HTTP_CREATED);
