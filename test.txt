@@ -1,0 +1,24 @@
+We're not looking for anything over the top here, unless you want to do that which is totally fine. We're really just looking to see how you attack a challenge in a Laravel with VueJS environment.
+
+
+
+While we're big on code reuse here at Phi (work smarter not harder!) in this case we'd like you to avoid copying some other project of yours or someone else's if you don't mind.
+
+So, without further ado...
+
+ 1. Create a simple app that lists basic contact information (Name, Email, Phone, Country, City, State/Region, Zip/Postal Code, etc.)
+ 2. Allow creating / editing / deleting of contact info.
+        Create a migration to create a contacts table.
+        Use soft deletes, form requests for validation, and a view composer to add a count of contacts label to the list of contacts.
+        Validate input: Name/Email/Phone required, Email is unique and a valid email address, State is 2 chars or empty
+        Integrate a trait of some type for the contacts model, perhaps something to return a given contact's info as a JSON string.
+ 3. Use VueJS in the UI somewhere. :-)
+ 4. Bonus - Demonstrate usage and understanding of the service container by creating a provider of some kind.
+
+
+
+When you're done, or when you've reached two hours after starting, please share your code by creating a repo on your GitHub account and sharing it with dave@tryphi.com and CC eugene@tryphi.com
+
+Again, we're not necessarily looking for a complete app here (we certainly won't mind if you end up with one!) so don't sweat it if you don't have a fully working project at the end.
+
+Thanks King and happy coding!
